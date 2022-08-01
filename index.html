@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
-  <main>
-  <div>
-  <h1>IP Address Tracker</h1>
-  </div>
-  <!---Search for any IP address or domain-->
-<div>
-  <h2>IP Address</h2>
- <h2>Location</h2>
-  <h2>Timezone</h2>
-    UTC <!-- add offset value dynamically using the API -->
- <h2> ISP</h2>
-</div>
 
-<div>
-  
-</div>
-</main>
+<body>
+
+
+  <main id="ip-address-tracker-main">
+
+
+    <div class="background-and-header">
+      <h1>IP Address Tracker</h1>
+    <!---Search for any IP address or domain-->
+    </div>
+
+
+    <div class="ip-details">
+      <ul>
+        <li>
+          <h2 class="ip-details-header">IP Address</h2>
+          <p class="ip-details-text"></p>
+        </li>
+        <li>
+          <h2 class="ip-details-header">Location</h2>
+          <p class="ip-details-text"></p>
+        </li>
+        <li>
+          <h2 class="ip-details-header">Timezone</h2>
+          <p class="ip-details-text"> UTC</p>
+     
+          <!-- add offset value dynamically using the API -->
+        </li>
+        <li>
+          <h2 class="ip-details-header">ISP</h2>
+          <p class="ip-details-text"></p>
+        </li>
+      </ul>
+    </div>
+
+    
+    <div>
+
+    </div>
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
