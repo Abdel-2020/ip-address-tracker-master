@@ -4,19 +4,86 @@
 
 
 /*reset styles*/
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Rubik", sans-serif;
 }
 
+li {
+    list-style: none;
+}
+
+
+/*Colours*/
+
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
 
 /*Styling*/
 
-
-.bg-image{
-    position:absolute;
+.bg-image {
+    position: absolute;
     z-index: -1;
     width: 100vw;
+}
+
+main {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 30px 0;
+}
+
+#ip-search {
+    width: 500px;
+    height: 55px;
+    border-radius: 15px;
+    border: none;
+    padding: 0 0 0 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.ip-search-submit-btn {
+    position: relative;
+    bottom: 65px;
+    left: 465px;
+    background-color: var(--very-dark-gray);
+    height: 55px;
+    padding: 20px;
+    width: auto;
+    border-radius: 0 20px 20px 0;
+}
+
+.ip-details{
+    border-radius: 25px;
+    height:150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.ip-details-item{
+    padding: 20px;
+    margin: 0 10px;
+    
+}
+
+.ip-details-header{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-gray);
 }

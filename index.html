@@ -26,41 +26,44 @@
 
 <body>
 
-  <img  class="bg-image" src="images/pattern-bg.png">
+  <img class="bg-image" src="images/pattern-bg.png">
+
+
   <main id="ip-address-tracker-main">
 
 
-    <div class="header">
-      <h1>IP Address Tracker</h1>
+    <section class="header-section">
+      <h1 class="header">IP Address Tracker</h1>
       <form>
-        <input type="text" id="ip-search" name="ip-search"  placeholder="Search for any IP address or domain"><br>
-        <img class="submit-btn" src="images/icon-arrow.svg">
+        <input type="text" id="ip-search" name="ip-search" placeholder="Search for any IP address or domain"><br>
+
+        <input type="image" class="ip-search-submit-btn" src="/images/icon-arrow.svg" />
       </form>
-    </div>
+    </section>
 
 
-    <div class="ip-details">
-      <ul>
-        <li>
-          <h2 class="ip-details-header">IP Address</h2>
+    <section class="ip-details-section">
+      <ul class="ip-details">
+        <li class="ip-details-item">
+          <h2 class="ip-details-header">IP ADDRESS</h2>
           <p class="ip-details-text"></p>
         </li>
-        <li>
-          <h2 class="ip-details-header">Location</h2>
+        <li class="ip-details-item">
+          <h2 class="ip-details-header">LOCATION</h2>
           <p class="ip-details-text"></p>
         </li>
-        <li>
-          <h2 class="ip-details-header">Timezone</h2>
+        <li class="ip-details-item">
+          <h2 class="ip-details-header">TIMEZONE</h2>
           <p class="ip-details-text"> UTC</p>
-     
+
           <!-- add offset value dynamically using the API -->
         </li>
-        <li>
+        <li class="ip-details-item">
           <h2 class="ip-details-header">ISP</h2>
           <p class="ip-details-text"></p>
         </li>
       </ul>
-    </div>
+    </section>
 
 
     <div>
