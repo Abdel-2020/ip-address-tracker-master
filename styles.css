@@ -69,10 +69,11 @@ main {
 }
 
 .ip-details{
-    border-radius: 25px;
+    border-radius: 15px;
     height:150px;
+    width:70vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: white;
 }
 
@@ -80,10 +81,14 @@ main {
     padding: 20px;
     margin: 0 10px;
     
+    
 }
 
 .ip-details-header{
-    font-size: 12px;
-    font-weight: 500;
+    width: 200px;
+    margin-right: 100px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
     color: var(--dark-gray);
 }
