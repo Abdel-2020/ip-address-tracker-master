@@ -22,11 +22,20 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+
+<!--Leaflet Import-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+ integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+ crossorigin=""></script>
+
 </head>
 
 <body>
-
-  <img class="bg-image" src="images/pattern-bg.png">
 
 
   <main id="ip-address-tracker-main">
@@ -36,7 +45,6 @@
       <h1 class="header">IP Address Tracker</h1>
       <form>
         <input type="text" id="ip-search" name="ip-search" placeholder="Search for any IP address or domain"><br>
-
         <input type="image" class="ip-search-btn" src="/images/icon-arrow.svg" >
       </form>
     </section>
@@ -64,14 +72,13 @@
         </li>
       </ul>
     </section>
-
-
-    <div>
-
-    </div>
+    
+    <div id="map"></div>
+ 
   </main>
 
   <script src="index.js"></script> 
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
