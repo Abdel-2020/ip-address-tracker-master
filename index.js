@@ -1,24 +1,3 @@
-/*After User hits enter or clicks the button,
-store the value in the search in a variable.*/
-
-/*const getUserInput = () => {
-    let ipSearchValue = "";
-    const ipSearchBtn = document.getElementsByClassName("ip-search-btn")[0];
-    
-
-    ipSearchBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        return ipSearchValue = document.getElementById("ip-search");
-      
-    });
-    return ipSearchValue;
-    
-
-}
-
-*/
-
-
 const readUserInput = () => {
     let ipSearchValue = document.getElementById("ip-search");
     const ipSearchBtn = document.getElementsByClassName("ip-search-btn")[0];
@@ -44,38 +23,39 @@ const findIp = (ip) => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            console.log(ip);
             let ipData = [data.query, data.city, "N/A", data.isp]
-            let ipDetails = document.querySelectorAll(".ip-details-text"); 
-            
-            for (let i= 0; i < ipDetails.length; i++){
+            let ipDetails = document.querySelectorAll(".ip-details-text");
+            let latLon = [data.lat, data.lon];
 
+
+            for (let i = 0; i < ipDetails.length; i++) {
                 ipDetails[i].innerHTML = ipData[i];
-
             }
 
+            displayLocation(latLon);
+
         })
-
-    console.log(ip);
-
 
 
 
 }
 
+const displayLocation = (locationArr) => {
+
+    map.setView(locationArr, 19);
+    let marker = L.marker(locationArr, {
+        icon: myIcon
+    }).addTo(map);
+}
 
 
-
-
-
-
-let map = L.map('map').setView([51.505, -0.09],  19);
+let map = L.map('map').setView([51.505, -0.09], 19);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
-
-
 
 let myIcon = L.icon({
     iconUrl: 'images/icon-location.svg',
@@ -85,14 +65,6 @@ let myIcon = L.icon({
 
 });
 
-
-
-
-
-
-let marker = L.marker([51.5, -0.09], {
-    icon: myIcon
-}).addTo(map);
 
 
 
