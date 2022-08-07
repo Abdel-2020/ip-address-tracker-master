@@ -26,25 +26,37 @@ const readUserInput = () => {
 
     ipSearchBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        if (ipSearchValue.value.length == 0){
+
+        if (ipSearchValue.value.length == 0) {
             alert(`Please enter an IP`);
         } else {
-            displayUserInput(ipSearchValue.value);
+            findIp(ipSearchValue.value);
         }
-        
+
     });
 }
 
 
-const displayUserInput = (ip) => {
+const findIp = (ip) => {
+
 
     fetch(`http://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`)
-    .then(res =>res.json())
-    .then(data => console.log(data))
+        .then(res => res.json())
+        .then(data => {
 
+            let ipDetails = document.querySelectorAll(".ip-details-text"); 
+            ipDetails[0].innerHTML = data.query;
+            ipDetails[1].innerHTML = data.city;
+            ipDetails[2].innerHTML = "";
+            ipDetails[3].innerHTML = data.isp;
+
+        })
 
     console.log(ip);
+
+
+
+
 }
 
 
@@ -53,23 +65,29 @@ const displayUserInput = (ip) => {
 
 
 
-
-
-
-
-
-
-
-
-
-var map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
+let myIcon = L.icon({
+    iconUrl: 'images/icon-location.svg',
+    iconSize: [50, 60],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+
+});
+
+
+
+
+
+
+let marker = L.marker([51.5, -0.09], {
+    icon: myIcon
+}).addTo(map);
 
 
 
