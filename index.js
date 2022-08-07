@@ -43,11 +43,11 @@ const findIp = (ip) => {
     fetch(`http://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`)
         .then(res => res.json())
         .then(data => {
-
+            console.log(data.isp);
             let ipDetails = document.querySelectorAll(".ip-details-text"); 
             ipDetails[0].innerHTML = data.query;
             ipDetails[1].innerHTML = data.city;
-            ipDetails[2].innerHTML = "";
+            ipDetails[2].innerHTML = "N/A";
             ipDetails[3].innerHTML = data.isp;
 
         })
