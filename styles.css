@@ -59,7 +59,7 @@ main {
 
 #ip-search {
     width: 700px;
-    height: 55px;
+    height: 70px;
     border-radius: 15px;
     padding: 0 0 0 10px;
     font-size: 18px;
@@ -69,10 +69,10 @@ main {
 
 .ip-search-btn {
     position: relative;
-    bottom: 65px;
+    bottom: 80px;
     left: 330px;
     background-color: var(--very-dark-gray);
-    height: 55px;
+    height: 70px;
     padding: 20px;
     width: auto;
     border-radius: 0 20px 20px 0;
@@ -89,8 +89,9 @@ main {
     top: 300px;
     z-index:1;
     border-radius: 15px;
-    height:150px;
+    height:180px;
     width:70vw;
+    padding:20px;
     background-color: white;
     filter: drop-shadow(0px 1px 4px grey);
 }
@@ -104,8 +105,6 @@ main {
 .ip-details-item{
     padding: 20px;
     margin: 0 10px;
-    
-    
 }
 
 .ip-details-header{
@@ -115,6 +114,12 @@ main {
     font-size: 14px;
     font-weight: 700;
     color: var(--dark-gray);
+}
+
+.ip-details-text{
+    padding: 20px 0 5px 0;
+    font-size: 2em;
+    font-weight: 500;
 }
 
 
