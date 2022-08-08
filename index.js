@@ -16,6 +16,8 @@ const readUserInput = () => {
 }
 
 
+
+/*
 const findIp = (ip) => {
 
 
@@ -37,9 +39,9 @@ const findIp = (ip) => {
 
         })
 
-
-
 }
+
+*/
 
 const displayLocation = (locationArr) => {
 
@@ -70,3 +72,26 @@ let myIcon = L.icon({
 
 
 readUserInput();
+
+
+
+const findIp = (ip) => {
+    fetch(`https://api.whatismyip.com/ip-address-lookup.php?key=a7c5386b76cfc04e48fb357f683da57f&input=${ip}&output=json`)
+        .then(response => response.json())
+        .then(res => { 
+            let ipInfo= res.ip_address_lookup[0];
+
+            let ipData = [ipInfo.ip, ipInfo.city, `UTC-${ipInfo.time}`, ipInfo.isp]
+            let ipDetailsText = document.querySelectorAll(".ip-details-text");
+            let latLon = [ipInfo.latitude, ipInfo.longitude];
+
+
+            for (let i = 0; i < ipDetailsText.length; i++) {
+                ipDetailsText[i].innerHTML = ipData[i];
+            }
+
+            displayLocation(latLon);
+
+        })
+        }
+
