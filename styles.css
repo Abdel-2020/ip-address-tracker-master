@@ -129,3 +129,103 @@ main {
        z-index: 0;
    
 }
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+    .header-section{
+   
+        height: 20vh;
+      
+    }
+    
+
+    #ip-search {
+        width: 300px;
+        height: 500px;
+        border-radius: 15px;
+        padding: 0 0 0 10px;
+        font-size: 18px;
+        margin: 10px;
+    }
+    
+    .ip-search-btn {
+        position: relative;
+        bottom: 80px;
+        left: 250px;
+        background-color: var(--very-dark-gray);
+        height: 40px;
+        padding: 10px;
+        width: auto;
+        border-radius: 0 20px 20px 0;
+    }
+    
+    .ip-search-btn:hover{
+    
+            background-color: var(--dark-gray);
+    }   
+    
+    
+    .ip-details-section{
+        position: absolute;
+        top: 300px;
+        z-index:1;
+        border-radius: 15px;
+        height:180px;
+        width:70vw;
+        padding:20px;
+        background-color: white;
+        filter: drop-shadow(0px 1px 4px grey);
+    }
+    
+    .ip-details{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    
+    .ip-details-item{
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .ip-details-header{
+        width: 200px;
+        margin-right: 100px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--dark-gray);
+    }
+    
+    .ip-details-text{
+        padding: 20px 0 5px 0;
+        font-size: 2em;
+        font-weight: 500;
+    }
+    
+    
+    #map { 
+           height: 70vh;
+           width:100vw;
+           z-index: 0;
+       
+    }
+    
+
+
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {...}
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {...}
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {...}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {...} 
