@@ -50,7 +50,7 @@ main {
     height: 30vh;
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .header{
@@ -63,7 +63,7 @@ main {
     border-radius: 15px;
     padding: 0 0 0 10px;
     font-size: 18px;
-    margin: 10px;
+    margin: 5px;
 }
 
 
@@ -94,6 +94,7 @@ main {
     padding:20px;
     background-color: white;
     filter: drop-shadow(0px 1px 4px grey);
+
 }
 
 .ip-details{
@@ -108,8 +109,6 @@ main {
 }
 
 .ip-details-header{
-    width: 200px;
-    margin-right: 100px;
     text-align: left;
     font-size: 14px;
     font-weight: 700;
@@ -137,29 +136,29 @@ main {
 
     .header-section{
    
-        height: 20vh;
+        height: 40vh;
       
     }
     
 
     #ip-search {
         width: 300px;
-        height: 500px;
+        height: 50px;
         border-radius: 15px;
         padding: 0 0 0 10px;
-        font-size: 18px;
+        font-size: 14px;
         margin: 10px;
     }
     
     .ip-search-btn {
         position: relative;
-        bottom: 80px;
-        left: 250px;
+        bottom: 60px;
+        left: 130px;
         background-color: var(--very-dark-gray);
-        height: 40px;
-        padding: 10px;
+        height: 50px;
+        padding: 15px;
         width: auto;
-        border-radius: 0 20px 20px 0;
+        border-radius: 0 15px 15px 0;
     }
     
     .ip-search-btn:hover{
@@ -170,31 +169,31 @@ main {
     
     .ip-details-section{
         position: absolute;
-        top: 300px;
+        top: 170px;
         z-index:1;
         border-radius: 15px;
-        height:180px;
+        height:300px;
         width:70vw;
-        padding:20px;
+        padding: 5px;
+        text-align: center;
         background-color: white;
         filter: drop-shadow(0px 1px 4px grey);
     }
     
     .ip-details{
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+
     
     }
     
     .ip-details-item{
-        padding: 20px;
-        margin: 0 10px;
+        padding:5px;
+        
     }
     
     .ip-details-header{
-        width: 200px;
-        margin-right: 100px;
-        text-align: left;
+        text-align: center;
         font-size: 14px;
         font-weight: 700;
         color: var(--dark-gray);
@@ -202,7 +201,7 @@ main {
     
     .ip-details-text{
         padding: 20px 0 5px 0;
-        font-size: 2em;
+        font-size: 1em;
         font-weight: 500;
     }
     
