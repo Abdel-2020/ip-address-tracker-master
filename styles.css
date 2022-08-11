@@ -69,7 +69,7 @@ main {
 
 .ip-search-btn {
     position: relative;
-    bottom: 80px;
+    bottom: 75px;
     left: 330px;
     background-color: var(--very-dark-gray);
     height: 70px;
@@ -132,7 +132,7 @@ main {
 
 
  /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 768px) {
 
     .header-section{
    
@@ -217,14 +217,192 @@ main {
 
  }
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {...}
  
  /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {...}
+ @media only screen and (min-width: 768px) {
+
+    .header-section{
+        height: 40vh;
+    }
+
+
+.header{
+    margin: 15px 0;
+}
+
+
+    
+
+    #ip-search {
+        width: 300px;
+        height: 50px;
+        border-radius: 15px;
+        padding: 0 0 0 10px;
+        font-size: 14px;
+    }
+    
+    .ip-search-btn {
+        position: relative;
+        bottom: 55px;
+        left: 130px;
+        background-color: var(--very-dark-gray);
+        height: 50px;
+        padding: 15px;
+        width: auto;
+        border-radius: 0 15px 15px 0;
+    }
+    
+    .ip-search-btn:hover{
+    
+            background-color: var(--dark-gray);
+    }   
+    
+    
+    .ip-details-section{
+        position: absolute;
+        top: 130px;
+        z-index:1;
+        border-radius: 15px;
+        height:100px;
+        width:70vw;
+        padding: 5px;
+        text-align: center;
+        background-color: white;
+        filter: drop-shadow(0px 1px 4px grey);
+    }
+    
+    .ip-details{
+        display: flex;
+    
+    }
+    
+    .ip-details-item{
+        padding:5px;
+        
+    }
+    
+    .ip-details-header{
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--dark-gray);
+    }
+    
+    .ip-details-text{
+        padding: 20px 0 5px 0;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    
+    
+    #map { 
+           height: 60vh;
+           width:100vw;
+           z-index: 0;
+       
+    }
+    
+
+ }
  
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {...}
+
  
  /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {...} 
+ @media only screen and (min-width: 1200px) {
+    /*Styling*/
+
+main {
+    width: 100vw;
+    height:100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-section{
+    background-image: url("images/pattern-bg.png");
+    background-size: cover;
+    width: 100vw;
+    height: 30vh;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+.header{
+    margin: 30px 0;
+}
+
+#ip-search {
+    width: 700px;
+    height: 70px;
+    border-radius: 15px;
+    padding: 0 0 0 10px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+.ip-search-btn {
+    position: relative;
+    bottom: 75px;
+    left: 330px;
+    background-color: var(--very-dark-gray);
+    height: 70px;
+    padding: 20px;
+    width: auto;
+    border-radius: 0 20px 20px 0;
+}
+
+.ip-search-btn:hover{
+
+        background-color: var(--dark-gray);
+}   
+
+
+.ip-details-section{
+    position: absolute;
+    top: 300px;
+    z-index:1;
+    border-radius: 15px;
+    height:180px;
+    width:70vw;
+    padding:20px;
+    background-color: white;
+    filter: drop-shadow(0px 1px 4px grey);
+
+}
+
+.ip-details{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.ip-details-item{
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.ip-details-header{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.ip-details-text{
+    padding: 20px 0 5px 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+#map { 
+       height: 70vh;
+       width:100vw;
+       z-index: 0;
+   
+}
+ } 

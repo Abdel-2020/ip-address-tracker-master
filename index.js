@@ -81,7 +81,7 @@ const findIp = (ip) => {
         .then(res => { 
             let ipInfo= res.ip_address_lookup[0];
 
-            let ipData = [ipInfo.ip, ipInfo.city, `UTC-${ipInfo.time}`, ipInfo.isp]
+            let ipData = [ipInfo.ip, ipInfo.city, `UTC ${ipInfo.time}`, ipInfo.isp]
             let ipDetailsText = document.querySelectorAll(".ip-details-text");
             let latLon = [ipInfo.latitude, ipInfo.longitude];
 
