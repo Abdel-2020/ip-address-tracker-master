@@ -79,6 +79,8 @@ const findIp = (ip) => {
     fetch(`https://api.whatismyip.com/ip-address-lookup.php?key=a7c5386b76cfc04e48fb357f683da57f&input=${ip}&output=json`)
         .then(response => response.json())
         .then(res => { 
+
+            console.log(res);
             let ipInfo= res.ip_address_lookup[0];
 
             let ipData = [ipInfo.ip, ipInfo.city, `UTC ${ipInfo.time}`, ipInfo.isp]

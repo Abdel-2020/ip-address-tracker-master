@@ -86,7 +86,7 @@ main {
 
 .ip-details-section{
     position: absolute;
-    top: 300px;
+    top: 35vh;
     z-index:1;
     border-radius: 15px;
     height:180px;
@@ -169,7 +169,7 @@ main {
     
     .ip-details-section{
         position: absolute;
-        top: 170px;
+        top: 25vh;
         z-index:1;
         border-radius: 15px;
         height:300px;
@@ -260,7 +260,7 @@ main {
     
     .ip-details-section{
         position: absolute;
-        top: 130px;
+        top: 35vh;
         z-index:1;
         border-radius: 15px;
         height:100px;
@@ -363,7 +363,7 @@ main {
 
 .ip-details-section{
     position: absolute;
-    top: 300px;
+    top: 25vh;
     z-index:1;
     border-radius: 15px;
     height:180px;
