@@ -55,12 +55,13 @@ main {
 
 .header{
     font-size: 2em;
+    font-weight: 500;
     margin: 30px 0;
 }
 
 #ip-search {
     width: 700px;
-    height: 70px;
+    height: 50px;
     border-radius: 15px;
     padding: 0 0 0 10px;
     font-size: 18px;
@@ -334,8 +335,8 @@ main {
 }
 
 #ip-search {
-    width: 700px;
-    height: 70px;
+    width: 500px;
+    height: 50px;
     border-radius: 15px;
     padding: 0 0 0 10px;
     font-size: 18px;
@@ -345,10 +346,10 @@ main {
 
 .ip-search-btn {
     position: relative;
-    bottom: 75px;
-    left: 330px;
+    bottom: 55px;
+    left: 250px;
     background-color: var(--very-dark-gray);
-    height: 70px;
+    height: 50px;
     padding: 20px;
     width: auto;
     border-radius: 0 20px 20px 0;
@@ -362,7 +363,7 @@ main {
 
 .ip-details-section{
     position: absolute;
-    top: 25vh;
+    top: 23vh;
     z-index:1;
     border-radius: 15px;
     height:180px;
